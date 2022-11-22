@@ -11,29 +11,7 @@ function BinarioADecimal(num) {
    return decimal;
 }
 
-console.log(BinarioADecimal('1100'))
-
-
-var str = '17';
-console.log(str.length)
-
 function DecimalABinario(num) {
-   /*var newNum = '';
-   for (let i = num; i === 2; i = Math.floor(i / 2)) {
-      // i / 2 = 8
-      if (i % 2 === 1) {
-         newNum = '1' + newNum;
-      } else {
-         newNum = '0' + newNum;
-      }
-   }
-   return newNum;
-
-
-   for (let i = 0; i < 10; i++) {
-
-   }
-   */
    let binario = '';
    let dividido = num;
    while (dividido > 0) {
@@ -43,10 +21,6 @@ function DecimalABinario(num) {
 
    return binario;
 }
-
-
-console.log(DecimalABinario(17))
-
 
 module.exports = {
    BinarioADecimal,
