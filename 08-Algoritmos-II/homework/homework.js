@@ -15,7 +15,6 @@ function mergeSort(array) {
   // Devolver el array ordenado resultante
   // Tu código:
 
-  //okey probemos ahora
 }
 
 // No modificar nada debajo de esta línea
