@@ -133,6 +133,8 @@ console.log(queue.dequeue())
 console.log(queue.dequeue())
 console.log(queue.dequeue())
 console.log(queue.dequeue())
+console.log(queue.enqueue(10))
+console.log(queue.enqueue(12))
 
 
 
