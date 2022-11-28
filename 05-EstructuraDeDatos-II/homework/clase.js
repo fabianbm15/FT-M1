@@ -108,7 +108,7 @@ LinkedList.prototype.search = function (data) {
     console.log(current.data);
     if (current.data === data) {
       return true;
-    } else if (isEven(current.data)) {
+    } else if (isEven(data)) {
       return true;
     }
     current = current.next;
@@ -123,7 +123,7 @@ function isEven(num) {
    } else {return false;}
 }
 
- console.log(isEven(10))
+ console.log(isEven(2))
 
  var newNode = new LinkedList();
  console.log(newNode.add(5));
@@ -133,7 +133,7 @@ function isEven(num) {
 
  // console.log(newNode.add(15));
  console.log(newNode.remove());
- console.log(newNode.search(30));
+ console.log(newNode.search());
 
 
  console.log(newNode);

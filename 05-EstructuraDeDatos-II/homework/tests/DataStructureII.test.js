@@ -144,7 +144,7 @@ describe('HashTable', function() {
 
   it('deberia guardar y buscar valores por key', function() {
     hashTable.set('key1', 'val1');
-    hashTable.set('key2', 'val2');
+    hashTable.set('key2', 'val2'); 
     hashTable.set('this is a very different string', 44.4);
     expect(hashTable.get('key1')).toBe('val1');
     expect(hashTable.get('key2')).toBe('val2');
