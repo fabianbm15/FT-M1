@@ -114,6 +114,9 @@ Queue.prototype.enqueue = function(valor) {
 }
 
 Queue.prototype.dequeue = function() {
+  if (this.queue.length === 0) {
+    return undefined;
+  } 
   let dato = this.queue.shift();
   return dato;
 }
