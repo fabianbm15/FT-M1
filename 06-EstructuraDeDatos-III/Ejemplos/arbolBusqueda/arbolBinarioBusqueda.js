@@ -52,6 +52,9 @@ Node.prototype.height = function(){
 	}
 }
 
+
+
+
 Node.prototype.balanceFactor = function(){
 	if(!this.left && !this.right){
 		return 0;
@@ -284,5 +287,5 @@ let tree = new Node(87).insert(93).insert(61).insert(80).insert(8).insert(91).in
 				//.delete(8).delete(7).delete(6).delete(5).delete(4).delete(3).delete(2).delete(1);
 // console.log('arbol:\n',tree);
 console.log('arbol:\n',tree);
-
+console.log(tree.height())
 module.exports = Node;

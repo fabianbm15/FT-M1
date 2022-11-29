@@ -157,6 +157,8 @@ HashTable.prototype.hash = function (str) { // se crea el método hash, este mos
 
 
 HashTable.prototype.set = function (clave, valor) { // se crea el método set dentro del prototipo de la clase HashTable
+  let indice = this.hash(clave);
+  
   if (typeof clave !== 'string') { // si el tipo de dato no es string, ingresará al if
     throw new TypeError('Keys must be strings'); // se envía un error debido a que el valor ingresado no es un string
   }
@@ -164,15 +166,6 @@ HashTable.prototype.set = function (clave, valor) { // se crea el método set de
   let array = this.array; // se declara array con el valor del array de la hashtable creada
   array.length = 35; // se declara el tamanio del array, que es de 35 buckets
 
-  function calculoIndice(str) { // se crea una funcion para el calculo del indice
-    let suma = 0; // se declara el valor de la suma, inicialmente en cero
-    for (let i = 0; i < str.length; i++) { // se realiza un for para cada una de las letras del string ingresado
-      suma = suma + str.charCodeAt(i); // suma será igual al valor de la suma + el valor unicode de cada letra
-    }
-    return suma % 35; // se retorna el valor hash de string ingresado, esto, realizando el módulo entre 35, que es el número de buckets
-  }
-
-  var indice = calculoIndice(clave); // se guarda el valor hash en la variable
   if (!array[indice]) { // si array en la posicion hash está vacío ingresará al if
     array[indice] = {}; // se crea un objeto en la posición del array
     array[indice][clave] = valor; // se guarda el key/value recibido en la posición del array
