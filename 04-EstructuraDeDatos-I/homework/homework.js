@@ -17,7 +17,7 @@ Secuencia:  0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ...
 
 Como ejercicio adicional y completamente opcional, al terminar de resolver este problema pueden 
 intentar definir funciones que logren los mismos resultados pero de manera iterativa.
-*/
+
 function nFactorial(n) {
   if (n < 0) {
      var error = 'No es posible calcular el factorial de un número negativo.';
@@ -28,15 +28,24 @@ function nFactorial(n) {
      return n * nFactorial(n - 1)
   }
 }
-
+*/
 // 5 * 24 // 120
 // 4 * 6
 // 3 * 2
 // 2 * 1
 
 
+function nFactorial(n) {
+  let num = 0;
+  if (n === 1) {
+    return 1;
+  }
 
-console.log(nFactorial(5))
+  return n * nFactorial(n - 1);
+}
+
+// 4 = 4 * 3 * 2 * 1
+console.log(nFactorial(1))
 /*
 function nFibonacci(n) {
   var arr = [];

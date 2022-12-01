@@ -71,7 +71,7 @@ function bubbleSort(array) {
         array[i] = array[i + 1];
         array[i + 1] = aux;
         swap = true;
-      }      
+      }
     }
   }
 
@@ -86,7 +86,8 @@ function insertionSort(array) {
   // el array recibido como parámetro utilizando arreglos
   // Devolver el array ordenado resultante
   // Tu código:
-
+  // --> Método personal
+  /*
   let newArray = array;
   for (let i = 1; i < newArray.length; i++) {
     var numExtract = newArray[i];
@@ -98,6 +99,20 @@ function insertionSort(array) {
     newArray[j + 1] = numExtract;
   }
   return newArray;
+  */
+
+  // --> Método instructor
+  let aux;                                 // 0 1  2 3
+  for (let i = 1; i < array.length; i++) { // 
+    for (let j = i; j >= 1; j--) { //        [1,2, 5,11] 
+      if (array[j] < array[j - 1]) {
+        aux = array[j]; // aux  5
+        array[j] = array[j - 1]; // array[j] = 11
+        array[j - 1] = aux; // array[j - 1] =  5
+      }
+    }
+  }
+  return array;
 }
 
 let newArrayIns = [5, 2, 1, 7, 8, 4, 3, 9, 6];
@@ -108,6 +123,9 @@ function selectionSort(array) {
   // el array recibido como parámetro utilizando dos arreglos
   // Devolver el array ordenado resultante
   // Tu código:
+  /*
+  // --> Método personal
+
   let newArray = array;
   var numMin = 0;
   for (let i = 0; i < newArray.length - 1; i++) {
@@ -126,6 +144,20 @@ function selectionSort(array) {
     newArray[i] = a;
   }
   return newArray;
+  */
+  // --> Método instructor
+  let aux;
+  for (let i = 0; i < array.length; i++) {
+    for (let j = i + 1; j < array.length; j++) { //       
+      if (array[i] > array[j]) { //                [1,2,5,7,11]
+        aux = array[j];
+        array[j] = array[i];
+        array[i] = aux;
+      }
+    }
+  }
+  return array;
+
 }
 let newArraySel = [5, 2, 1, 7, 8, 4, 3, 9, 6];
 console.log(selectionSort(newArraySel))

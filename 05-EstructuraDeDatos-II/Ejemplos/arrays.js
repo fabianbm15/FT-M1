@@ -13,6 +13,20 @@ function minimo(arr) {
   return aux;
 }
 
+function minimoPersonal(array) {
+  let  num = array[0];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] < num) {
+      num = array[i];
+    }
+  }
+  return num;
+}
+
+let array = [7, 4, 1, 8, 2, 5, 6, 9, 3]
+console.log(minimo(array))
+console.log(minimoPersonal(array))
+
 // MAYOR
 
 function mayor(arr) {
@@ -24,6 +38,19 @@ function mayor(arr) {
   return aux;
 }
 
+function mayorPersonal(array) {
+  let num = [0];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] > num) {
+      num = array[i];
+    }
+  }
+  return num;
+}
+
+console.log(mayor(array))
+console.log(mayorPersonal(array))
+
 // TOTAL
 
 function total(arr) {
@@ -34,6 +61,10 @@ function total(arr) {
   return aux;
 }
 
+console.log(total(array))
+
+
+
 function totalBis(arr) {
   var aux = 0;
   for (var i=0; i<arr.length; i++) {
@@ -42,6 +73,9 @@ function totalBis(arr) {
   console.log('El total es: ', aux);
   return aux;
 }
+
+console.log(totalBis(array))
+
 
 // PROMEDIO
 
